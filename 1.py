@@ -1,17 +1,3 @@
-import wifi
-
-# Fonction pour scanner les réseaux WiFi visibles
-def scan_wifi_networks():
-    cells = wifi.Cell.all('wlan0')
-    
-    print("Réseaux WiFi disponibles :")
-    for i, cell in enumerate(cells):
-        print(f"{i+1}. {cell.ssid}")
-
-    choice = int(input("Veuillez choisir le numéro du réseau WiFi auquel vous souhaitez vous connecter : ")) - 1
-    selected_network = cells[choice]
-    
-    return selected_network
 
 # Fonction pour se connecter au réseau WiFi sélectionné
 def connect_to_network(selected_network):
